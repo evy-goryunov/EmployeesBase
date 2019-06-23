@@ -1,0 +1,15 @@
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\bin\Debug\EmployeesBase.exe.config
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\bin\Debug\EmployeesBase.exe
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\bin\Debug\EmployeesBase.pdb
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.csprojAssemblyReference.cache
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\MainWindow.g.cs
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\App.g.cs
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase_MarkupCompile.cache
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase_MarkupCompile.lref
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\MainWindow.baml
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.g.resources
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.Properties.Resources.resources
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.csproj.GenerateResource.cache
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.csproj.CoreCompileInputs.cache
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.exe
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.pdb

@@ -1,0 +1,50 @@
+﻿<Window x:Class="EmployeesBase.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EmployeesBase"
+        mc:Ignorable="d"
+        Title="EditWindow" Height="450" Width="800">
+	<Grid>
+		<StackPanel VerticalAlignment="Top">
+			<Menu Width="Auto" Height="20">
+				<MenuItem Header="Файл">
+					<MenuItem x:Name="AppExit" Header="Выход" HorizontalAlignment="Left" Width="140"/>
+				</MenuItem>
+				<MenuItem Header="Вид">
+					<MenuItem x:Name="Options" Header="Настройки" HorizontalAlignment="Left" Width="150"/>
+				</MenuItem>
+				<MenuItem Header="Помощь">
+					<MenuItem x:Name="About" Header="О программе" HorizontalAlignment="Left" Width="160"/>
+				</MenuItem>
+			</Menu>
+		</StackPanel>
+		<StackPanel HorizontalAlignment="Left" Height="384" Margin="10,25,0,0" VerticalAlignment="Top" Width="139">
+			<Label Content="Label"/>
+			<Label Content="Label"/>
+			<Label Content="Label"/>
+			<Label Content="Label"/>
+			<Label Content="Label"/>
+			<Label Content="Label"/>
+		</StackPanel>
+		<Separator HorizontalAlignment="Left" Height="100" Margin="-27,162,0,0" VerticalAlignment="Top" Width="364" RenderTransformOrigin="0.5,0.5">
+			<Separator.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<RotateTransform Angle="90"/>
+					<TranslateTransform Y="4.943"/>
+				</TransformGroup>
+			</Separator.RenderTransform>
+		</Separator>
+		<StackPanel HorizontalAlignment="Left" Height="384" Margin="154,25,0,0" VerticalAlignment="Top" Width="207">
+			<TextBox Height="23" TextWrapping="Wrap" Text="TextBox"/>
+			<TextBox Height="23" TextWrapping="Wrap" Text="TextBox"/>
+			<TextBox Height="23" TextWrapping="Wrap" Text="TextBox"/>
+			<TextBox Height="23" TextWrapping="Wrap" Text="TextBox"/>
+			<TextBox Height="23" TextWrapping="Wrap" Text="TextBox"/>
+			<ComboBox/>
+		</StackPanel>
+
+	</Grid>
+</Window>

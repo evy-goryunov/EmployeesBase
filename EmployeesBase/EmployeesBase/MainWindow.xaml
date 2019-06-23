@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmployeesBase"
         mc:Ignorable="d"
-        Title="База сотрудников" Height="450" Width="900" ResizeMode="NoResize">
+        Title="База сотрудников" Height="450" Width="620" ResizeMode="NoResize">
 	<Grid>
 		<StackPanel VerticalAlignment="Top">
 			<Menu Width="Auto" Height="20">
@@ -22,26 +22,28 @@
 		</StackPanel>
 		<StackPanel HorizontalAlignment="Left" 
 					Height="30" 
-					Margin="10,30,0,0" 
+					Margin="10,31,-269,0" 
 					VerticalAlignment="Top" 
-					Width="872">
+					Width="873">
 			<Button Content="Добавить сотрудника"
-					HorizontalAlignment="Left"
 					Height="30" 
-					Width="140"/>
+					Width="140" HorizontalAlignment="Left"/>
 			<Button Content="Добавить отдел"
 					Height="30" 
 					Width="140" 
-					Margin="145,-50,587,0" VerticalAlignment="Bottom"/>
+					Margin="144,-50,587,0" VerticalAlignment="Bottom"/>
 			<Button Content="Редактировать"
 					Height="30" 
 					Width="140" 
 					Margin="204,-50,356,0" VerticalAlignment="Bottom"/>
 			<Button Content="Удалить" 
+					VerticalAlignment="Top" 
 					Height="30" 
-					Width="140" Margin="140,-30,1,0"/>
+					Width="140" 
+					Margin="140,-30,0,0"/>
+
 		</StackPanel>
-		<StackPanel Height="329" Margin="0,60,20,30" Width="872">
+		<StackPanel Height="329" Margin="0,61,10,31">
 			<ListView Margin="10" x:Name="lvEmployee" HorizontalAlignment="Left" VerticalAlignment="Top">
 				<ListView.View>
 					<GridView>
@@ -54,7 +56,7 @@
 
 						<GridViewColumn Header="Имя" Width="120" 
                                     DisplayMemberBinding="{Binding Salary}" />
-						
+
 						<GridViewColumn Header="Отчество" Width="120" 
                                     DisplayMemberBinding="{Binding Name}"/>
 

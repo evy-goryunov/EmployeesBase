@@ -13,3 +13,5 @@ G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\Employe
 G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.csproj.CoreCompileInputs.cache
 G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.exe
 G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.pdb
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EditWindow.g.cs
+G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EditWindow.baml

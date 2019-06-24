@@ -25,50 +25,59 @@
 					Margin="10,31,-269,0" 
 					VerticalAlignment="Top" 
 					Width="873">
-			<Button Content="Добавить сотрудника"
-					Height="30" 
-					Width="140" HorizontalAlignment="Left"/>
-			<Button Content="Добавить отдел"
+			<Button x:Name="AddBtn" 
+					Content="Добавить сотрудника"
 					Height="30" 
 					Width="140" 
-					Margin="144,-50,587,0" VerticalAlignment="Bottom"/>
-			<Button Content="Редактировать"
+					HorizontalAlignment="Left" 
+					Click="AddBtn_Click"/>
+			<Button x:Name="AddDepartmen" 
+					Content="Добавить отдел"
 					Height="30" 
 					Width="140" 
-					Margin="204,-50,356,0" VerticalAlignment="Bottom"/>
-			<Button Content="Удалить" 
+					Margin="144,-50,587,0" 
+					VerticalAlignment="Bottom"/>
+			<Button x:Name="EditBtn" 
+					Content="Редактировать"
+					Height="30" 
+					Width="140" 
+					Margin="204,-50,356,0" 
+					VerticalAlignment="Bottom"/>
+			<Button x:Name="DeleteBtn" 
+					Content="Удалить" 
 					VerticalAlignment="Top" 
 					Height="30" 
 					Width="140" 
 					Margin="140,-30,0,0"/>
 
 		</StackPanel>
-		<StackPanel Height="329" Margin="0,61,10,31">
+		<StackPanel Margin="0,61,10,10">
 			<ListView Margin="10" x:Name="lvEmployee" HorizontalAlignment="Left" VerticalAlignment="Top">
 				<ListView.View>
 					<GridView>
 						<GridViewColumn Header="ID" 
                                     Width="35" 
-                                    DisplayMemberBinding="{Binding Name}"/>
+                                    DisplayMemberBinding="{Binding _id}"/>
 
 						<GridViewColumn Header="Фамилия" Width="120" 
-                                    DisplayMemberBinding="{Binding Age}"  />
+                                    DisplayMemberBinding="{Binding _sureName}"  />
 
 						<GridViewColumn Header="Имя" Width="120" 
-                                    DisplayMemberBinding="{Binding Salary}" />
+                                    DisplayMemberBinding="{Binding _firstName}" />
 
 						<GridViewColumn Header="Отчество" Width="120" 
-                                    DisplayMemberBinding="{Binding Name}"/>
+                                    DisplayMemberBinding="{Binding _secondName}"/>
 
 						<GridViewColumn Header="Возраст" Width="50" 
-                                    DisplayMemberBinding="{Binding Age}"  />
+                                    DisplayMemberBinding="{Binding _age}"  />
 
 						<GridViewColumn Header="Зарплата" Width="120" 
-                                    DisplayMemberBinding="{Binding Salary}" />
+                                    DisplayMemberBinding="{Binding _salary}" />
 					</GridView>
 				</ListView.View>
 			</ListView>
 		</StackPanel>
+
 
 	</Grid>
 </Window>

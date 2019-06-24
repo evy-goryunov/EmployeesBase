@@ -20,9 +20,20 @@ namespace EmployeesBase
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		EditWindow ed;
+
 		public MainWindow()
 		{
 			InitializeComponent();
 		}
+
+		private void AddBtn_Click(object sender, RoutedEventArgs e)
+		{
+			ed = new EditWindow();
+			ed.Show();
+		}
+
+
+		//{ Binding «ElementName»= «Имя_объекта - источника», Path =«Свойство_объекта - источника», Mode =«Mode»}
 	}
 }

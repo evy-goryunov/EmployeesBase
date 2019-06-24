@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmployeesBase"
         mc:Ignorable="d"
-        Title="Редактировать профиль" Height="280" Width="330">
+        Title="Редактировать профиль" Height="800" Width="800">
 	<Grid>
 		<StackPanel VerticalAlignment="Top">
 			<Menu Width="Auto" Height="20">
@@ -20,13 +20,14 @@
 				</MenuItem>
 			</Menu>
 		</StackPanel>
-		<StackPanel HorizontalAlignment="Left" Height="173" Margin="10,25,0,0" VerticalAlignment="Top" Width="71">
+		<StackPanel HorizontalAlignment="Left" Height="214" Margin="10,25,0,0" VerticalAlignment="Top" Width="71">
 			<Label Content="ID"/>
 			<Label Content="Фамилия"/>
 			<Label Content="Имя"/>
 			<Label Content="Отчество"/>
+			<Label Content="Возраст"/>
 			<Label Content="Зарплата"/>
-			<Label Content="Отдел"/>
+			<Label Content="Отдел" />
 		</StackPanel>
 		<Separator HorizontalAlignment="Left" Height="100" Margin="-27,79,0,0" VerticalAlignment="Top" Width="218" RenderTransformOrigin="0.5,0.5">
 			<Separator.RenderTransform>
@@ -37,19 +38,22 @@
 				</TransformGroup>
 			</Separator.RenderTransform>
 		</Separator>
-		<StackPanel HorizontalAlignment="Left" Height="173" Margin="97,25,0,0" VerticalAlignment="Top" Width="207">
-			<TextBlock Height="26" TextWrapping="Wrap" Text="TextBlock"/>
-			<TextBox Height="26" TextWrapping="Wrap" Text="TextBox"/>
-			<TextBox Height="26" TextWrapping="Wrap" Text="TextBox"/>
-			<TextBox Height="26" TextWrapping="Wrap" Text="TextBox"/>
-			<TextBox Height="26" TextWrapping="Wrap" Text="TextBox"/>
-			<ComboBox Height="26"/>
+		<StackPanel HorizontalAlignment="Left" Height="189" Margin="97,25,0,0" VerticalAlignment="Top" Width="207">
+			<TextBlock Height="26" TextWrapping="Wrap" Text=""/>
+			<TextBox x:Name="txtSurename" Height="26" TextWrapping="Wrap" Text=""/>
+			<TextBox x:Name="txtFirstname" Height="26" TextWrapping="Wrap" Text=""/>
+			<TextBox x:Name="txtSecondname" Height="26" TextWrapping="Wrap" Text=""/>
+			<TextBox x:Name="txtAge" Height="26" TextWrapping="Wrap" Text=""/>
+			<TextBox x:Name="txtSalary" Height="26" TextWrapping="Wrap" Text=""/>
+			<ComboBox x:Name="cmbDepartment" Height="26" />
 		</StackPanel>
-		<Button Content="Сохранить" 
+		<Button x:Name="btnAdd" Content="Сохранить" 
 				HorizontalAlignment="Left" 
-				Margin="97,203,0,0" 
+				Margin="97,219,0,0" 
 				VerticalAlignment="Top" 
-				Width="75"/>
+				Width="75"  />
+		<TextBox HorizontalAlignment="Left" Height="23" Margin="327,53,0,0" TextWrapping="Wrap" Text="{Binding ElementName=Employee, Path=_sureName,Mode=Default}" VerticalAlignment="Top" Width="120"/>
+
 
 	</Grid>
 </Window>

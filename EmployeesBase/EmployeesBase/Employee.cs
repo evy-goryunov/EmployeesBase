@@ -50,6 +50,6 @@ namespace EmployeesBase
 			_salary = salary;
 		}
 		//добовляем ID
-		//public void SetId(int id) => _id = id;
+		public void SetId(int id) => _id = id;
 	}
 }

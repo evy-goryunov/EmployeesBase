@@ -17,7 +17,7 @@ namespace EmployeesBase
 			dbEmployee   = new ObservableCollection<Employee>();
 			dbDepartment = new ObservableCollection<Department>();
 		}
-		// TODO реализовать логику проверки полей на пустые или неверные
+
 		//редактируем отдел
 		public static void EditProfile(string first, string sure, string dep, int age, int sal, int i)
 		{
@@ -28,12 +28,7 @@ namespace EmployeesBase
 		{
 			dbEmployee.Add(newEmployee);
 		}
-		// Получить ID
-		public int GetID()
-		{
-			return dbEmployee.Count();
-		}
-
+		// Удалить сотрудника
 		public static void DeleteProfile(int i)
 		{
 			dbEmployee.RemoveAt(i);

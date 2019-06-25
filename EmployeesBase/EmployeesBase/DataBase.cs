@@ -9,34 +9,41 @@ namespace EmployeesBase
 {
     class DataBase
     {
-		public ObservableCollection<Employee> dbEmployee;
-		public ObservableCollection<Department> dbDepartment;
+		public static ObservableCollection<Employee> dbEmployee { get; set; }
+		public static ObservableCollection<Department> dbDepartment { get; set; }
 
 		public DataBase()
 		{
-			dbEmployee  = new ObservableCollection<Employee>();
+			dbEmployee   = new ObservableCollection<Employee>();
 			dbDepartment = new ObservableCollection<Department>();
 		}
-		// коллекция для сотрудников
-		//public ObservableCollection<Employee> dbEmployee { get; set; } = new ObservableCollection<Employee>();
-		// коллекция для отделов
-		//public ObservableCollection<Department> dbDepartment { get; set; } = new ObservableCollection<Department>();
-		////редактируем возраст
-		//public static void SetDep(string a, int i) => dbEmployee[i].SetDepartment(a);
-		////редактируем зарплату
-		//public static void SetSal(int a, int i) => dbEmployee[i].SetSalary(a);
-		////получаем ID
-		//public static void SetId(int i) => dbEmployee[i].SetId(i);
-
-		public void AddEmployee(Employee newEmployee)
+		// TODO реализовать логику проверки полей на пустые или неверные
+		//редактируем отдел
+		public static void EditProfile(string first, string sure, string dep, int age, int sal, int i)
+		{
+			dbEmployee[i].Edit(first, sure, dep, age, sal);
+		}
+		// Добавляем сотрудника
+		public static void AddEmployee(Employee newEmployee)
 		{
 			dbEmployee.Add(newEmployee);
 		}
-
+		// Получить ID
 		public int GetID()
 		{
 			return dbEmployee.Count();
 		}
+
+		public static void DeleteProfile(int i)
+		{
+			dbEmployee.RemoveAt(i);
+		}
+
+		//получаем ID
+		//public static void SetId(int i)
+		//{
+		//	dbEmployee[i].SetId(i);
+		//}
 
 	}
 }

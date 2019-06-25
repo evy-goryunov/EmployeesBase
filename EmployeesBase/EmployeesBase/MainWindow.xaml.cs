@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,27 +14,71 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace EmployeesBase
 {
 	/// <summary>
 	/// Логика взаимодействия для MainWindow.xaml
 	/// </summary>
-	public partial class MainWindow : Window
+	public partial class MainWindow : Window, IView
 	{
-		EditWindow ed;
+		Presenter present;
+		DataBase db;
 
 		public MainWindow()
 		{
 			InitializeComponent();
+			present = new Presenter(this);
+			db = new DataBase();
+			AddBtn.Click += delegate { present.Add(); };
+			EditBtn.Click += delegate { present.ChangeDepartment(); };
+			DeleteBtn.Click += delegate { present.DeleteProfile(); };
+			ListOfEmp.ItemsSource = DataBase.dbEmployee;
 		}
-
-		private void AddBtn_Click(object sender, RoutedEventArgs e)
+		// реализация IView
+		public string firstName //Имя
 		{
-			ed = new EditWindow();
-			ed.Show();
+			get => txtFirstname.Text;
+			set
+			{
+				txtFirstname.Text = value;
+			}
+		}
+		public string department //Отчество
+		{
+			get => txtDepartment.Text;
+			set => txtDepartment.Text = value;
+		}
+		public string sureName //Фамилия
+		{
+			get => txtSurename.Text;
+			set => txtSurename.Text = value;
+		}
+		public string salary //Зарплата
+		{
+			get => txtAge.Text;
+			set => txtAge.Text = value;
+		}
+		public string age //Возраст
+		{
+			get => txtAge.Text;
+			set => txtAge.Text = value;
+		}
+		public int id
+		{
+			get
+			{
+				return int.Parse( txtID.Text);
+			}
+
+			set => txtID.Text = value.ToString();
 		}
 
-
+		//Обновить
+		private void Refresh_Click(object sender, RoutedEventArgs e)
+		{
+			ListOfEmp.Items.Refresh();
+		}
 		//{ Binding «ElementName»= «Имя_объекта - источника», Path =«Свойство_объекта - источника», Mode =«Mode»}
 	}
 }

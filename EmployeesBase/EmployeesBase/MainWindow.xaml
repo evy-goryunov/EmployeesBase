@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmployeesBase"
         mc:Ignorable="d"
-        Title="База сотрудников" Height="450" Width="620" ResizeMode="NoResize">
+        Title="База сотрудников" Height="300" Width="930" ResizeMode="NoResize">
 	<Grid>
 		<StackPanel VerticalAlignment="Top">
 			<Menu Width="Auto" Height="20">
@@ -29,14 +29,13 @@
 					Content="Добавить сотрудника"
 					Height="30" 
 					Width="140" 
-					HorizontalAlignment="Left" 
-					Click="AddBtn_Click"/>
-			<Button x:Name="AddDepartmen" 
-					Content="Добавить отдел"
+					HorizontalAlignment="Left"/>
+			<Button x:Name="Refresh" 
+					Content="Обновить"
 					Height="30" 
 					Width="140" 
 					Margin="144,-50,587,0" 
-					VerticalAlignment="Bottom"/>
+					VerticalAlignment="Bottom" Click="Refresh_Click"/>
 			<Button x:Name="EditBtn" 
 					Content="Редактировать"
 					Height="30" 
@@ -51,22 +50,22 @@
 					Margin="140,-30,0,0"/>
 
 		</StackPanel>
-		<StackPanel Margin="0,61,10,10">
-			<ListView Margin="10" x:Name="lvEmployee" HorizontalAlignment="Left" VerticalAlignment="Top">
+		<StackPanel Margin="0,61,10,10" HorizontalAlignment="Left">
+			<ListView Margin="10" x:Name="ListOfEmp" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto">
 				<ListView.View>
 					<GridView>
-						<GridViewColumn Header="ID" 
+						<GridViewColumn Header="ID"
                                     Width="35" 
                                     DisplayMemberBinding="{Binding _id}"/>
 
 						<GridViewColumn Header="Фамилия" Width="120" 
-                                    DisplayMemberBinding="{Binding _sureName}"  />
+                                    DisplayMemberBinding="{Binding _sureName}"/>
 
 						<GridViewColumn Header="Имя" Width="120" 
                                     DisplayMemberBinding="{Binding _firstName}" />
 
-						<GridViewColumn Header="Отчество" Width="120" 
-                                    DisplayMemberBinding="{Binding _secondName}"/>
+						<GridViewColumn Header="Отдел" Width="120" 
+                                    DisplayMemberBinding="{Binding _department}"/>
 
 						<GridViewColumn Header="Возраст" Width="50" 
                                     DisplayMemberBinding="{Binding _age}"  />
@@ -77,7 +76,37 @@
 				</ListView.View>
 			</ListView>
 		</StackPanel>
-
-
+		<StackPanel HorizontalAlignment="Left" Height="189" Margin="676,33,0,0" VerticalAlignment="Top" Width="207">
+			<TextBox x:Name="txtID" Height="26" TextWrapping="Wrap" Text=""/>
+			<TextBox x:Name="txtSurename" Height="26" TextWrapping="Wrap" Text=""/>
+			<TextBox x:Name="txtFirstname" Height="26" TextWrapping="Wrap" Text=""/>
+			<TextBox x:Name="txtDepartment" Height="26" TextWrapping="Wrap" Text=""/>
+			<TextBox x:Name="txtAge" Height="26" TextWrapping="Wrap" Text=""/>
+			<TextBox x:Name="txtSalary" Height="26" TextWrapping="Wrap" Text=""/>
+		</StackPanel>
+		<StackPanel HorizontalAlignment="Left" Height="214" Margin="600,33,0,0" VerticalAlignment="Top" Width="71">
+			<Label Content="ID"/>
+			<Label Content="Фамилия"/>
+			<Label Content="Имя"/>
+			<Label Content="Отдел"/>
+			<Label Content="Возраст"/>
+			<Label Content="Зарплата"/>
+		</StackPanel>
+		
+		<Separator HorizontalAlignment="Left" 
+				   Height="100" 
+				   Margin="479,95,0,0" 
+				   VerticalAlignment="Top" 
+				   Width="232" 
+				   RenderTransformOrigin="0.5,0.5">
+			<Separator.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="-90"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Separator.RenderTransform>
+		</Separator>
 	</Grid>
 </Window>

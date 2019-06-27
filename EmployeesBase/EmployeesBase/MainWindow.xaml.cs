@@ -30,9 +30,10 @@ namespace EmployeesBase
 			InitializeComponent();
 			present = new Presenter(this);
 			db = new DataBase();
-			AddBtn.Click += delegate { present.Add(); };
+			AddBtn.Click += delegate { present.AddToSQLDB(); };
 			EditBtn.Click += delegate { present.ChangeDepartment(); };
 			DeleteBtn.Click += delegate { present.DeleteProfile(); };
+			BtnRead.Click += delegate { present.ReadDB(); };
 			ListOfEmp.ItemsSource = DataBase.dbEmployee;
 			//lb.ItemsSource = DataBase.dbEmployee;
 		}

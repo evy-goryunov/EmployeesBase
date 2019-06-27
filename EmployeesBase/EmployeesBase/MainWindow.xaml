@@ -7,7 +7,11 @@
         mc:Ignorable="d"
         Title="База сотрудников" Height="350" Width="930" ResizeMode="NoResize">
 	<Grid>
-		<StackPanel VerticalAlignment="Top">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="50*"/>
+			<ColumnDefinition Width="181*"/>
+		</Grid.ColumnDefinitions>
+		<StackPanel VerticalAlignment="Top" Grid.ColumnSpan="2">
 			<Menu Width="Auto" Height="20">
 				<MenuItem Header="Файл">
 					<MenuItem x:Name="AppExit" Header="Выход" HorizontalAlignment="Left" Width="140"/>
@@ -22,9 +26,9 @@
 		</StackPanel>
 		<StackPanel HorizontalAlignment="Left" 
 					Height="30" 
-					Margin="10,31,-269,0" 
+					Margin="10,31,0,0" 
 					VerticalAlignment="Top" 
-					Width="873">
+					Width="873" Grid.ColumnSpan="2">
 			<Button x:Name="AddBtn" 
 					Content="Добавить сотрудника"
 					Height="30" 
@@ -50,7 +54,7 @@
 					Margin="140,-30,0,0"/>
 
 		</StackPanel>
-		<StackPanel Margin="0,61,0,10" HorizontalAlignment="Left">
+		<StackPanel Margin="0,61,0,10" HorizontalAlignment="Left" Grid.ColumnSpan="2">
 			<ListView Margin="10" x:Name="ListOfEmp" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto">
 				<ListView.View>
 					<GridView>
@@ -76,7 +80,7 @@
 				</ListView.View>
 			</ListView>
 		</StackPanel>
-		<StackPanel HorizontalAlignment="Left" Height="189" Margin="676,33,0,0" VerticalAlignment="Top" Width="207">
+		<StackPanel HorizontalAlignment="Left" Height="189" Margin="476,33,0,0" VerticalAlignment="Top" Width="207" Grid.Column="1">
 			<TextBox x:Name="txtID" Height="26" TextWrapping="Wrap" Text=""/>
 			<TextBox x:Name="txtSurename" Height="26" TextWrapping="Wrap" Text=""/>
 			<TextBox x:Name="txtFirstname" Height="26" TextWrapping="Wrap" Text=""/>
@@ -84,7 +88,7 @@
 			<TextBox x:Name="txtAge" Height="26" TextWrapping="Wrap" Text=""/>
 			<TextBox x:Name="txtSalary" Height="26" TextWrapping="Wrap" Text=""/>
 		</StackPanel>
-		<StackPanel HorizontalAlignment="Left" Height="214" Margin="600,33,0,0" VerticalAlignment="Top" Width="71">
+		<StackPanel HorizontalAlignment="Left" Height="214" Margin="400,33,0,0" VerticalAlignment="Top" Width="71" Grid.Column="1">
 			<Label Content="ID"/>
 			<Label Content="Фамилия"/>
 			<Label Content="Имя"/>
@@ -95,10 +99,10 @@
 
 		<Separator HorizontalAlignment="Left" 
 				   Height="100" 
-				   Margin="479,95,0,0" 
+				   Margin="279,95,0,0" 
 				   VerticalAlignment="Top" 
 				   Width="232" 
-				   RenderTransformOrigin="0.5,0.5">
+				   RenderTransformOrigin="0.5,0.5" Grid.Column="1">
 			<Separator.RenderTransform>
 				<TransformGroup>
 					<ScaleTransform/>
@@ -108,6 +112,7 @@
 				</TransformGroup>
 			</Separator.RenderTransform>
 		</Separator>
+		<Button x:Name="BtnRead" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="476,256,0,0" VerticalAlignment="Top" Width="75"/>
 		<!--<Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="219" Margin="10,259,0,0" Stroke="Black" VerticalAlignment="Top" Width="233" RadiusY="7.811" RadiusX="7.811"/>
 
 		<ListBox x:Name="lb" 

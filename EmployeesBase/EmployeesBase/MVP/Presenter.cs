@@ -14,6 +14,21 @@ namespace EmployeesBase
 		{
 			this._view = view;
 		}
+		// добавить сотрудника в SQL ДБ
+		public void AddToSQLDB()
+		{
+			if (_view.firstName != "" && _view.sureName != "" && _view.department != "" && _view.age != "" && _view.salary != "")
+			{
+				DataBase.AddToDB(new Employee(_view.firstName, _view.sureName, _view.department, int.Parse(_view.age), int.Parse(_view.salary), _view.id));
+			}
+		}
+
+		//ЧТение из БД
+		public void ReadDB()
+		{
+			DataBase.ReadFromBD();
+		}
+
 		// добавить сотрудника
 		public void Add()
 		{

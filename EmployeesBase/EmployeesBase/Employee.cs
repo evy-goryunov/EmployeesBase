@@ -17,6 +17,11 @@ namespace EmployeesBase
 		public int _salary { get; set; }       //Зарплата
 		public int _age { get; set; }          //Возраст
 
+		public Employee()
+		{
+
+		}
+
 		public Employee(string firstName, string sureName, string department,  int age, int salary, int id)
 		{
 			this._firstName = firstName;

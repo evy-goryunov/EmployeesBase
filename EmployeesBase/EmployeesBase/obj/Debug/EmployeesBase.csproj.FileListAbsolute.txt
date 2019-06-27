@@ -13,3 +13,18 @@ G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\Employe
 G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.csproj.CoreCompileInputs.cache
 G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.exe
 G:\C#\C# second step\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.pdb
+D:\distr\geekbrains\EmployeesBase\EmployeesBase\EmployeesBase\bin\Debug\EmployeesBase.exe.config
+D:\distr\geekbrains\EmployeesBase\EmployeesBase\EmployeesBase\bin\Debug\EmployeesBase.exe
+D:\distr\geekbrains\EmployeesBase\EmployeesBase\EmployeesBase\bin\Debug\EmployeesBase.pdb
+D:\distr\geekbrains\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.csprojAssemblyReference.cache
+D:\distr\geekbrains\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\MainWindow.g.cs
+D:\distr\geekbrains\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\App.g.cs
+D:\distr\geekbrains\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase_MarkupCompile.cache
+D:\distr\geekbrains\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase_MarkupCompile.lref
+D:\distr\geekbrains\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\MainWindow.baml
+D:\distr\geekbrains\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.g.resources
+D:\distr\geekbrains\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.Properties.Resources.resources
+D:\distr\geekbrains\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.csproj.GenerateResource.cache
+D:\distr\geekbrains\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.csproj.CoreCompileInputs.cache
+D:\distr\geekbrains\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.exe
+D:\distr\geekbrains\EmployeesBase\EmployeesBase\EmployeesBase\obj\Debug\EmployeesBase.pdb

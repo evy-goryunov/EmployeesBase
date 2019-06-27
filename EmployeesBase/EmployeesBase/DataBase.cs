@@ -1,14 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace EmployeesBase
 {
     class DataBase
-    {
+	{
+
 		public static ObservableCollection<Employee> dbEmployee { get; set; }
 		public static ObservableCollection<Department> dbDepartment { get; set; }
 
@@ -39,6 +42,9 @@ namespace EmployeesBase
 		//{
 		//	dbEmployee[i].SetId(i);
 		//}
+
+
+
 
 	}
 }

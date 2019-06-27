@@ -2,33 +2,20 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace EmployeesBase
 {
-    class Employee : INotifyPropertyChanged
-
+    class Employee
 	{
-		public event PropertyChangedEventHandler PropertyChanged;
 		public string _firstName { get; set; } //Имя
 		public string _sureName { get; set; }  //Фамилия
 		public string _department { get; set; }//Отдел
 		public int _id { get; set; }           //ID
 		public int _salary { get; set; }       //Зарплата
 		public int _age { get; set; }          //Возраст
-
-
-		public string firstName //Имя
-		{
-			get => this._firstName;
-			set
-			{
-				this._firstName = value;
-				PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.firstName)));
-			}
-		}
-
 
 		public Employee(string firstName, string sureName, string department,  int age, int salary, int id)
 		{
@@ -39,7 +26,6 @@ namespace EmployeesBase
 			this._age = age;
 			this._id = id;
 		}
-
 		//редактируем отдел
 		public void Edit(string firstName, string sureName, string department, int age, int salary)
 		{

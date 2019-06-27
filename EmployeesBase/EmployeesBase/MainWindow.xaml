@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmployeesBase"
         mc:Ignorable="d"
-        Title="База сотрудников" Height="300" Width="930" ResizeMode="NoResize">
+        Title="База сотрудников" Height="350" Width="930" ResizeMode="NoResize">
 	<Grid>
 		<StackPanel VerticalAlignment="Top">
 			<Menu Width="Auto" Height="20">
@@ -50,7 +50,7 @@
 					Margin="140,-30,0,0"/>
 
 		</StackPanel>
-		<StackPanel Margin="0,61,10,10" HorizontalAlignment="Left">
+		<StackPanel Margin="0,61,0,10" HorizontalAlignment="Left">
 			<ListView Margin="10" x:Name="ListOfEmp" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto">
 				<ListView.View>
 					<GridView>
@@ -92,7 +92,7 @@
 			<Label Content="Возраст"/>
 			<Label Content="Зарплата"/>
 		</StackPanel>
-		
+
 		<Separator HorizontalAlignment="Left" 
 				   Height="100" 
 				   Margin="479,95,0,0" 
@@ -108,5 +108,42 @@
 				</TransformGroup>
 			</Separator.RenderTransform>
 		</Separator>
+		<!--<Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="219" Margin="10,259,0,0" Stroke="Black" VerticalAlignment="Top" Width="233" RadiusY="7.811" RadiusX="7.811"/>
+
+		<ListBox x:Name="lb" 
+			HorizontalAlignment="Left" 
+			Height="203" 
+			Margin="19,266,0,0" 
+			VerticalAlignment="Top" 
+			Width="214"
+			Grid.Column="0">
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel>
+						<TextBlock Text="{Binding Path=_sureName}"/>
+						<TextBlock Text="{Binding Path=_firstName}"/>
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>
+		<StackPanel HorizontalAlignment="Left" 
+					Height="219" 
+					Margin="248,259,0,0" 
+					VerticalAlignment="Top" 
+					Width="211" 
+					>
+			<TextBlock TextWrapping="Wrap" Text="Фамилия:"/>
+			<TextBlock TextWrapping="Wrap" Text=""/>
+			<TextBlock TextWrapping="Wrap" Text="Имя:"/>
+			<TextBlock TextWrapping="Wrap" Text=""/>
+			<TextBlock TextWrapping="Wrap" Text="Отдел:"/>
+			<TextBlock TextWrapping="Wrap" Text=""/>
+			<TextBlock TextWrapping="Wrap" Text="Возраст:"/>
+			<TextBlock TextWrapping="Wrap" Text=""/>
+			<TextBlock TextWrapping="Wrap" Text="Зарплата:"/>
+			<TextBlock TextWrapping="Wrap" Text=""/>
+		</StackPanel>-->
+
+
 	</Grid>
 </Window>

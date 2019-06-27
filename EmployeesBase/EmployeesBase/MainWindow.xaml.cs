@@ -34,6 +34,7 @@ namespace EmployeesBase
 			EditBtn.Click += delegate { present.ChangeDepartment(); };
 			DeleteBtn.Click += delegate { present.DeleteProfile(); };
 			ListOfEmp.ItemsSource = DataBase.dbEmployee;
+			//lb.ItemsSource = DataBase.dbEmployee;
 		}
 		// реализация IView
 		public string firstName //Имя

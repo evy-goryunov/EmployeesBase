@@ -35,6 +35,7 @@ namespace EmployeesBase
 			DeleteBtn.Click += delegate { present.DeleteProfile(); };
 			BtnRead.Click += delegate { present.ReadDB(); };
 			ListOfEmp.ItemsSource = DataBase.dbEmployee;
+			DataBase.ReadFromBD();
 			//lb.ItemsSource = DataBase.dbEmployee;
 		}
 		// реализация IView

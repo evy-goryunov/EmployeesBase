@@ -37,10 +37,7 @@ namespace EmployeesBase
 			Debug.WriteLine(sql);
 			try
 			{
-				using (SqlConnection newConnect = new SqlConnection(@" Data Source=(localdb)\MSSQLLocalDB;
-																Initial Catalog=EmployeeDB;
-																Integrated Security=True;
-																Pooling=False"))
+				using (SqlConnection newConnect = new SqlConnection(@" Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Lesson7;Integrated Security=True;Pooling=False"))
 				{
 					newConnect.Open();
 					SqlCommand command = new SqlCommand(sql, newConnect);
@@ -51,6 +48,7 @@ namespace EmployeesBase
 			{
 				Debug.WriteLine(e.Message);
 			}
+			ReadFromBD();
 		}
 
 
@@ -58,23 +56,28 @@ namespace EmployeesBase
 		public static void ReadFromBD()
 		{
 			Employee newEmployee = new Employee();
-			using (SqlConnection newConnect = new SqlConnection(@" Data Source=(localdb)\MSSQLLocalDB;
-																Initial Catalog=EmployeeDB;
-																Integrated Security=True;
-																Pooling=False"))
+			try
 			{
-				newConnect.Open();
-				var sql = @" SELECT * FROM People";
-				SqlCommand command = new SqlCommand(sql, newConnect);
-				SqlDataReader reader = command.ExecuteReader();
+				using (SqlConnection newConnect = new SqlConnection(@" Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Lesson7;Integrated Security=True;Pooling=False"))
+				{
+					newConnect.Open();
+					var sql = @" SELECT * FROM People";
+					SqlCommand command = new SqlCommand(sql, newConnect);
+					SqlDataReader reader = command.ExecuteReader();
 
-				dbEmployee.Add(new Employee(newEmployee._firstName = $"{reader["FIRSTNAME"]}",
-											newEmployee._sureName = $"{reader["SURENAME"]}",
-											newEmployee._department = $"{reader["DEPARTMENT"]}",
-											newEmployee._age = int.Parse($"{reader["AGE"]}"),
-											newEmployee._salary = int.Parse($"{reader["SALARY"]}"),
-											newEmployee._id = int.Parse($"{reader["ID"]}")));
-
+					while (reader.Read())
+					{
+						dbEmployee.Add(new Employee(newEmployee._firstName = $"{reader["FIRSTNAME"]}",
+													newEmployee._sureName = $"{reader["SURENAME"]}",
+													newEmployee._department = $"{reader["DEPARTMENT"]}",
+													newEmployee._age = int.Parse($"{reader["AGE"]}"),
+													newEmployee._salary = int.Parse($"{reader["SALARY"]}"),
+													newEmployee._id = int.Parse($"{reader["ID"]}")));
+					}
+				}
+			}catch(Exception e)
+			{
+				Debug.WriteLine(e.Message);
 			}
 		}
 

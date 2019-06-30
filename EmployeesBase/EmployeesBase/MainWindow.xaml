@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EmployeesBase"
         mc:Ignorable="d"
-        Title="База сотрудников" Height="350" Width="930" ResizeMode="NoResize">
+        Title="База сотрудников" Height="500" Width="930">
 	<Grid>
 		<Grid.ColumnDefinitions>
 			<ColumnDefinition Width="50*"/>
@@ -54,7 +54,7 @@
 					Margin="140,-30,0,0"/>
 
 		</StackPanel>
-		<StackPanel Margin="0,61,0,10" HorizontalAlignment="Left" Grid.ColumnSpan="2">
+		<StackPanel Margin="0,95,0,-24" HorizontalAlignment="Left" Grid.ColumnSpan="2">
 			<ListView Margin="10" x:Name="ListOfEmp" HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto">
 				<ListView.View>
 					<GridView>
@@ -81,7 +81,6 @@
 			</ListView>
 		</StackPanel>
 		<StackPanel HorizontalAlignment="Left" Height="189" Margin="476,33,0,0" VerticalAlignment="Top" Width="207" Grid.Column="1">
-			<TextBox x:Name="txtID" Height="26" TextWrapping="Wrap" Text=""/>
 			<TextBox x:Name="txtSurename" Height="26" TextWrapping="Wrap" Text=""/>
 			<TextBox x:Name="txtFirstname" Height="26" TextWrapping="Wrap" Text=""/>
 			<TextBox x:Name="txtDepartment" Height="26" TextWrapping="Wrap" Text=""/>
@@ -89,7 +88,6 @@
 			<TextBox x:Name="txtSalary" Height="26" TextWrapping="Wrap" Text=""/>
 		</StackPanel>
 		<StackPanel HorizontalAlignment="Left" Height="214" Margin="400,33,0,0" VerticalAlignment="Top" Width="71" Grid.Column="1">
-			<Label Content="ID"/>
 			<Label Content="Фамилия"/>
 			<Label Content="Имя"/>
 			<Label Content="Отдел"/>
@@ -112,7 +110,7 @@
 				</TransformGroup>
 			</Separator.RenderTransform>
 		</Separator>
-		<Button x:Name="BtnRead" Content="Button" Grid.Column="1" HorizontalAlignment="Left" Margin="476,256,0,0" VerticalAlignment="Top" Width="75"/>
+		<Button x:Name="BtnRead" Content="Read from DB" HorizontalAlignment="Left" Margin="10,66,0,0" VerticalAlignment="Top" Width="140" Height="30"/>
 		<!--<Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="219" Margin="10,259,0,0" Stroke="Black" VerticalAlignment="Top" Width="233" RadiusY="7.811" RadiusX="7.811"/>
 
 		<ListBox x:Name="lb" 

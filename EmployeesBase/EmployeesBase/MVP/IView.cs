@@ -11,8 +11,9 @@ namespace EmployeesBase
 		string firstName { get; set; } //Имя
 		string department { get; set; }//Отчество
 		string sureName { get; set; }  //Фамилия
-		int id { get; set; }         //ID
+		//int id { get; set; }         //ID
 		string salary { get; set; }    //Зарплата
 		string age { get; set; }	   //Возраст
+		string dep { get; set; }
 	}
 }

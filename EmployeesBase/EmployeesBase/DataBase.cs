@@ -22,6 +22,29 @@ namespace EmployeesBase
 			dbDepartment = new ObservableCollection<Department>();
 		}
 
+		//добовляем департамент в БД 
+		public static void AddDepToDB(Department newDepartment)
+		{
+			var sql = String.Format("INSERT INTO Table (DEPARTMENT)"
+									+ "VALUES (N'{0}')",
+									//newEmployee._id,
+									newDepartment._departmentName);
+			Debug.WriteLine(sql);
+			try
+			{
+				using (SqlConnection newConnect = new SqlConnection(@" Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EmployeeDB;Integrated Security=True;Pooling=False"))
+				{
+					newConnect.Open();
+					SqlCommand command = new SqlCommand(sql, newConnect);
+					command.ExecuteNonQuery();
+				}
+			}
+			catch (Exception e)
+			{
+				Debug.WriteLine(e.Message);
+			}
+		}
+
 
 		//добовляем сотрудника в БД 
 		public static void AddToDB(Employee newEmployee)
@@ -37,7 +60,7 @@ namespace EmployeesBase
 			Debug.WriteLine(sql);
 			try
 			{
-				using (SqlConnection newConnect = new SqlConnection(@" Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Lesson7;Integrated Security=True;Pooling=False"))
+				using (SqlConnection newConnect = new SqlConnection(@" Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EmployeeDB;Integrated Security=True;Pooling=False"))
 				{
 					newConnect.Open();
 					SqlCommand command = new SqlCommand(sql, newConnect);
@@ -48,7 +71,6 @@ namespace EmployeesBase
 			{
 				Debug.WriteLine(e.Message);
 			}
-			ReadFromBD();
 		}
 
 
@@ -58,7 +80,7 @@ namespace EmployeesBase
 			Employee newEmployee = new Employee();
 			try
 			{
-				using (SqlConnection newConnect = new SqlConnection(@" Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Lesson7;Integrated Security=True;Pooling=False"))
+				using (SqlConnection newConnect = new SqlConnection(@" Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EmployeeDB;Integrated Security=True;Pooling=False"))
 				{
 					newConnect.Open();
 					var sql = @" SELECT * FROM People";

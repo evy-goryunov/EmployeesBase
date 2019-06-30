@@ -1,1 +1,16 @@
 # EmployeesBase
+CREATE TABLE [dbo].[Table]
+(
+	[Id] INT NOT NULL PRIMARY KEY, 
+    [DEPARTMENT] NVARCHAR(50) NULL
+)
+
+CREATE TABLE [dbo].[People] (
+    [Id]         INT            IDENTITY (1, 1) NOT NULL,
+    [FIRSTNAME]  NVARCHAR (MAX) COLLATE Cyrillic_General_CI_AS NOT NULL,
+    [SURENAME]   NVARCHAR (MAX) COLLATE Cyrillic_General_CI_AS NOT NULL,
+    [DEPARTMENT] NVARCHAR (MAX) NULL,
+    [SALARY]     NVARCHAR (MAX) NULL,
+    [AGE]        NVARCHAR (MAX) NULL,
+    CONSTRAINT [PK_dbo.People] PRIMARY KEY CLUSTERED ([Id] ASC)
+);

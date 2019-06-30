@@ -31,6 +31,14 @@ namespace EmployeesBase
 			this._age = age;
 			this._id = id;
 		}
+		public Employee(string firstName, string sureName, string department, int age, int salary)
+		{
+			this._firstName = firstName;
+			this._sureName = sureName;
+			this._salary = salary;
+			this._department = department;
+			this._age = age;
+		}
 		//редактируем отдел
 		public void Edit(string firstName, string sureName, string department, int age, int salary)
 		{

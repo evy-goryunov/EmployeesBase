@@ -30,9 +30,9 @@ namespace EmployeesBase
 			InitializeComponent();
 			present = new Presenter(this);
 			db = new DataBase();
-			AddBtn.Click += delegate { present.AddToSQLDB(); };
-			EditBtn.Click += delegate { present.ChangeDepartment(); };
-			DeleteBtn.Click += delegate { present.DeleteProfile(); };
+			AddBtn.Click += delegate { present.AddToSQLDB(); present.AddDepToDB(); };
+			//EditBtn.Click += delegate { present.ChangeDepartment(); };
+			//DeleteBtn.Click += delegate { present.DeleteProfile(); };
 			BtnRead.Click += delegate { present.ReadDB(); };
 			ListOfEmp.ItemsSource = DataBase.dbEmployee;
 			DataBase.ReadFromBD();
@@ -67,14 +67,20 @@ namespace EmployeesBase
 			get => txtAge.Text;
 			set => txtAge.Text = value;
 		}
-		public int id
-		{
-			get
-			{
-				return int.Parse( txtID.Text);
-			}
+		//public int id
+		//{
+		//	get
+		//	{
+		//		return int.Parse(txtID.Text);
+		//	}
 
-			set => txtID.Text = value.ToString();
+		//	set => txtID.Text = value.ToString();
+		//}
+
+		public string dep
+		{
+			get => txtDepartment.Text;
+			set => txtDepartment.Text = value;
 		}
 
 		//Обновить
@@ -82,6 +88,5 @@ namespace EmployeesBase
 		{
 			ListOfEmp.Items.Refresh();
 		}
-		//{ Binding «ElementName»= «Имя_объекта - источника», Path =«Свойство_объекта - источника», Mode =«Mode»}
 	}
 }
